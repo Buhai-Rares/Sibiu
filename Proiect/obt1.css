@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+
+  nav {
+    background: rgb(117, 72, 4);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  nav .mainMenu li a:hover {
+    background: rgb(202, 235, 80);
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-facebook:hover {
+    color: rgb(0, 110, 255);
+  }
+  .fa-twitter:hover {
+    color: rgb(86, 154, 243);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+  }
+  .fa-github:hover {
+    color: rgb(255, 123, 0);
+  }
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+  
+  .heading {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem #000;
+  }
+
+  .cuprins {
+    background-color: #297ce9;
+    padding: 5rem 0;
+  }
+  
+  .galerie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+  }
+  
+  .galerie_link {
+    position: relative;
+    margin: 4rem 1rem;
+  }
+  
+  .galerie_link::before {
+    content: "";
+    position: absolute;
+    top: 2vw;
+    left: 80%;
+    width: 0.2rem;
+    height: 0;
+    background-color: #fff;
+    z-index: 10;
+    transition: height 0.5s;
+  }
+  
+  .galerie_link:hover::before {
+    height: 80%;
+  }
+  
+  .galerie_link::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 2rem;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition: width 0.5s;
+  }
+  
+  .galerie_link:hover::after {
+    width: 90%;
+  }
+  
+  .poza {
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+      0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+    transition: all 0.5s;
+  }
+  
+  .galerie_link:hover .poza {
+    box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+      3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+    filter: blur(0.5rem);
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  
+  .nume{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+  }
+  
+  .galerie_link:hover .nume {
+    width: 100%;
+    transition: width 1.5s 0.5s;
+  }
+  
+  .descriere {
+    position: absolute;
+    bottom: 3vw;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+  }
+  
+  .galerie_link:hover .descriere {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 1s;
+  }
+
+  
