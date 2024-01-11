@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+nav {
+  background: rgb(117, 72, 4);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+  background: rgb(202, 235, 80);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+nav .logo {
+  margin: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+img {
+  outline: solid 4px transparent;
+  transition: all 0.6s ease 0s;
+  margin-top: 5px;
+}
+img:hover {
+  outline-color: rgba(0, 0, 0, 0.863);
+  transition: all 1.2s ease 0s;
+}
+input[type="text"]:focus {
+  outline: 2px solid red;
+  transition: all 0.6s ease 0s;
+}
+p,
+ul {
+  font-size: 1.2rem;
+}
+
+#content {
+  position: relative;
+}
+
+.curiozitati-body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3b444f;
+  text-align: left;
+}
+
+.centru {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.container-main {
+  width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  background-image: url("curiozitati-despre-sibiu-1000x500.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-main2 {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container-main3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.lista {
+  max-width: 1030px;
+}
+
+.centru2 {
+  display: flex;
+}
+
+.imagine-principala {
+  margin-right: 30px;
+}
